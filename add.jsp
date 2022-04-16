@@ -7,10 +7,10 @@
 		String class_name = request.getParameter("class_name");
 
 		String sql = "insert into t_score(id, name, class_name, score) values( '"+id+"', '"+name+"', '"+class_name+"', '"+x+"' )";
-		Class.forName("com.hxtt.sql.access.AccessDriver");
-		String url = "jdbc:Access:///d:\\demo.accdb";
-		String username = "";
-		String password = "";
+		Class.forName("com.mysql.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/web_student";
+		String username = "root";
+		String password = "12345";
 
 		Connection conn = DriverManager.getConnection(url,username,password);
 		Statement stmt = conn.createStatement();

@@ -4,10 +4,10 @@
 	String myUsername = request.getParameter("x");
 	String myPass = request.getParameter("y");
 
-	Class.forName("com.hxtt.sql.access.AccessDriver");//加载驱动
-	String url = "jdbc:Access:///d:\\demo.accdb";
-	String username = "";
-	String password = "";
+	Class.forName("com.mysql.jdbc.Driver");
+	String url = "jdbc:mysql://localhost:3306/web_student";
+	String username = "root";
+	String password = "12345";
 
 	//建立连接，得到连接对象
 	Connection con = DriverManager.getConnection(url, username , password);
