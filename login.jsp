@@ -20,6 +20,7 @@
 	ResultSet rs  = stmt.executeQuery();
 
 	if(rs.next()){
+		session.setAttribute("passcard", "ok");
 		response.sendRedirect("view7.jsp");
 	}
 	else{
