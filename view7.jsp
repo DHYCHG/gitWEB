@@ -3,7 +3,7 @@
 
 <%
 	String passcard = (String)session.getAttribute("passcard");
-	if (!passcard.equals("ok") || passcard == null){
+	if (passcard == null || !passcard.equals("ok")){
 		response.sendRedirect("nolog.jsp");
 		return;
 	}
